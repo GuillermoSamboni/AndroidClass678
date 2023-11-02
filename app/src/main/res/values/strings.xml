@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">primeraAplicacion</string>
+    <string name="hola_mundo">Hola mundo</string>
+    <string name="mi_boton">Mi boton</string>
+    <string name="user">Usuario</string>
+    <string name="contrase_a">Contraseña</string>
+    <string name="sign_in">Ingresar</string>
+    <string name="iniciar_sesi_n">Iniciar sesión</string>
+    <string name="image_login">image_login</string>
+    <string name="registrar">Registrar</string>
+    <string name="recuperar_contrase_a">Recuperar contraseña</string>
+</resources>

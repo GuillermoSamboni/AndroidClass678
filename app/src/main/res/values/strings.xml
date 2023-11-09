@@ -9,4 +9,5 @@
     <string name="image_login">image_login</string>
     <string name="registrar">Registrar</string>
     <string name="recuperar_contrase_a">Recuperar contraseña</string>
+    <string name="logouth">Cerrar sesion</string>
 </resources>

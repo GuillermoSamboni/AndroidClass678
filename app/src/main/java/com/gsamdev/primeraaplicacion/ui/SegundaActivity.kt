@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.widget.Toast
 import com.gsamdev.primeraaplicacion.data.SharedPreferencesManager
 import com.gsamdev.primeraaplicacion.databinding.ActivitySegundaBinding
+import com.gsamdev.primeraaplicacion.utils.Constants
 
 class SegundaActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySegundaBinding
@@ -28,6 +29,13 @@ class SegundaActivity : AppCompatActivity() {
     private fun initUI() {
         setupExtras()
         setupPreferences()
+        setupClickListeners()
+    }
+
+    private fun setupClickListeners() {
+        binding.btnLogout.setOnClickListener {
+            sharedPref.removeSharedPref(Constants().isLoggedKey)
+        }
     }
 
     private fun setupExtras() {
@@ -39,7 +47,7 @@ class SegundaActivity : AppCompatActivity() {
 
 
     private fun setupPreferences() {
-        val user = sharedPref.getUser()
+        val user = sharedPref.getPref(Constants().userNameKey, Constants().defaultValue).toString()
         Toast.makeText(this, user, Toast.LENGTH_SHORT).show()
     }
 

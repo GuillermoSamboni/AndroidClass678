@@ -9,6 +9,7 @@ import android.os.Looper
 import android.widget.Toast
 import com.gsamdev.primeraaplicacion.R
 import com.gsamdev.primeraaplicacion.data.SharedPreferencesManager
+import com.gsamdev.primeraaplicacion.utils.Constants
 
 @SuppressLint("CustomSplashScreen")
 class SplashScreenActivity : AppCompatActivity() {
@@ -29,26 +30,20 @@ class SplashScreenActivity : AppCompatActivity() {
 
     private fun setupJumpNextActivity() {
 
-        val userLogged = sharedPref.getUsersIsLogged()
-
-        if (userLogged) {
-            Looper.myLooper()?.let {
-                Handler(it).postDelayed(
-                    {
+        val userLogged = sharedPref.getPref(Constants().isLoggedKey, false) as Boolean
+        Looper.myLooper()?.let {
+            Handler(it).postDelayed(
+                {
+                    if (userLogged) {
                         val intent = Intent(this, SegundaActivity::class.java)
                         startActivity(intent)
-                    }, TIMER_SPLASH
-                )
-            }
-        } else {
-            Looper.myLooper()?.let {
-                Handler(it).postDelayed(
-                    {
+                    } else {
                         val intent = Intent(this, MainActivity::class.java)
                         startActivity(intent)
-                    }, TIMER_SPLASH
-                )
-            }
+                    }
+
+                }, TIMER_SPLASH
+            )
         }
     }
 

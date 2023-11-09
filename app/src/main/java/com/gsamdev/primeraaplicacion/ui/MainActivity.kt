@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import com.gsamdev.primeraaplicacion.data.SharedPreferencesManager
 import com.gsamdev.primeraaplicacion.databinding.ActivityMainBinding
+import com.gsamdev.primeraaplicacion.utils.Constants
 
 
 class MainActivity : AppCompatActivity() {
@@ -41,7 +42,11 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("keyUser", user)
             intent.putExtra("keyPass", pass)
 
-            sharedPref.saveBoolean()
+            //sharedPref.saveBoolean()
+
+            sharedPref.savePref(Constants().isLoggedKey, true)
+            sharedPref.savePref(Constants().userNameKey, user)
+            sharedPref.savePref(Constants().passUserKey, pass)
 
             startActivity(intent)
         }

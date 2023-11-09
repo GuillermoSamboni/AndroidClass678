@@ -1,10 +1,8 @@
-package com.gsamdev.primeraaplicacion
+package com.gsamdev.primeraaplicacion.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
-import android.view.TextureView
-import android.widget.TextView
 import android.widget.Toast
 import com.gsamdev.primeraaplicacion.data.SharedPreferencesManager
 import com.gsamdev.primeraaplicacion.databinding.ActivitySegundaBinding

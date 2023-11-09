@@ -1,10 +1,9 @@
-package com.gsamdev.primeraaplicacion
+package com.gsamdev.primeraaplicacion.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
-import android.widget.Toast
 import com.gsamdev.primeraaplicacion.data.SharedPreferencesManager
 import com.gsamdev.primeraaplicacion.databinding.ActivityMainBinding
 
@@ -19,13 +18,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         sharedPref = SharedPreferencesManager(this)
-
-        val boolean = sharedPref.getBoolean()
-
-        if (boolean) {
-            val intent = Intent(this, SegundaActivity::class.java)
-            startActivity(intent)
-        }
 
         initUI()
     }

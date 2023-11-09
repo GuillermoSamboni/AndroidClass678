@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    tools:context=".SegundaActivity">
+    tools:context=".ui.SegundaActivity">
 
     <TextView
         android:id="@+id/txtUser"

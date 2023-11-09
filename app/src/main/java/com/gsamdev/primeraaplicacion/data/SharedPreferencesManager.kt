@@ -27,7 +27,7 @@ class SharedPreferencesManager(private var context: Context) {
         return sharedPreferences.getString("keyUserPref", "Empty").toString()
     }
 
-    fun getBoolean(): Boolean {
+    fun getUsersIsLogged(): Boolean {
         return sharedPreferences.getBoolean("meBoolean", false)
     }
 
